@@ -10,6 +10,36 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="shortcut icon" type="image/jfif" href="data\aarows.jpg" />
     <link rel="stylesheet" href="data\style.css">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a> </div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [{
+                    "proName": "OANDA:SPX500USD",
+                    "title": "S&P 500"
+                }, {
+                    "proName": "OANDA:NAS100USD",
+                    "title": "Nasdaq 100"
+                }, {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR/USD"
+                }, {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "BTC/USD"
+                }, {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "ETH/USD"
+                }],
+                "colorTheme": "light",
+                "isTransparent": false,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
 </head>
 
 
@@ -24,7 +54,6 @@
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="science.html">The Science</a></li>
                     <li><a href="test.html">Research</a></li>
-                    <li><a href="ticks.js">TBD</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,6 +80,9 @@
             </form>
             <div id="plot"></div>
             <script src="ticks.js"></script>
+
+
+
         </body>
 
 
@@ -60,11 +92,13 @@
             <footer class="footer"></footer>
             <div class="container">
                 <div align="center" class="row">
-                    <div class="col-lg-2"><a href="https://www.linkedin.com/in/mike-hughes/" target="_blank">Mike</a></div>
+                    <div class="col-lg-2"><a href="https://www.linkedin.com/in/mike-hughes/" target="_blank">Mike</a>
+                    </div>
                     <div class="col-lg-2"><a href="https://www.linkedin.com/in/harry-chapman-b8a2b370/" target="_blank">Harry</a></div>
                     <div class="col-lg-2"><a href="https://www.linkedin.com/in/hena-venugopal-73628a20/" target="_blank">Hena</a></div>
                     <div class="col-lg-2"><a href="https://www.linkedin.com/in/donald-stegman-9538237/" target="_blank">Donald</a></div>
-                    <div class="col-lg-2"><a href="https://www.linkedin.com/in/issac-vilchis/" target="_blank">Issac</a></div>
+                    <div class="col-lg-2"><a href="https://www.linkedin.com/in/issac-vilchis/" target="_blank">Issac</a>
+                    </div>
                 </div>
 
             </div>
