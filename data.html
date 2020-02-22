@@ -58,5 +58,42 @@
                 </ul>
             </div>
         </nav>
+    </div>
+    <div>
 
+        <body>
+            <div class="wrapper">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+                <script>
+                    function arrayToTable(tableData) {
+                        let table = $('<table></table>');
+                        $(tableData).each(function(i, rowData) {
+                            var row = $('<tr></tr>');
+                            $(rowData).each(function(j, cellData) {
+                                row.append($('<td>' + cellData + '</td>'));
+                            });
+                            table.append(row);
+                        });
+                        return table;
+                    }
+
+                    $.ajax({
+                        type: "GET",
+                        url: "https://raw.githubusercontent.com/jharrychapman/Final_DS_Project/master/data/PredVarwithTickerVarTrend.csv",
+                        success: function(data) {
+                            $('body').append(arrayToTable(Papa.parse(data).data));
+                        }
+                    });
+                </script>
+            </div>
+    </div>
+
+    <!-- <footer class="footer">
+        <footer class="text-center"></footer>
+        <h6 align="center">The Information Contained Here Does Not Consitute Financial Advice</h6>
+        <h6 align="center">Past Performance Does Not Guarantee Future Results</h6>
+        <h6 align="center">SMU Data Science Bootcamp</h6>
+    </footer> -->
+    </body>
 </body>
